@@ -1,0 +1,24 @@
+<div class="nav-header">
+    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    [width]="profilePicSize()" [height]="profilePicSize()" 
+    alt="">
+
+    <div class="header-text" [class.hide-header]="sideNavCollapsed()">
+        <h1>RudraSantadip</h1>
+        <span>System Admin</span>
+    </div>
+</div>
+
+<mat-nav-list>
+    <a mat-list-item
+    class="menu-item"
+     *ngFor="let item of menuItems()"
+     [routerLink]="item.route"
+     routerLinkActive="selected-menu-item"
+     #rla="routerLinkActive"
+     [activated]="rla.isActive"
+     >
+       <mat-icon [fontSet]="rla.isActive? 'material-icons':'material-icons-outlined'" matListItemIcon>{{item.icon}}</mat-icon>
+       <span matListItemTitle *ngIf="!sideNavCollapsed()">{{item.label}}</span> 
+    </a>
+ </mat-nav-list>
