@@ -34,7 +34,16 @@ export class NavigationComponent
         label:'Settings',
         route:'settings'
       },
-      
+      {
+        icon:'person_add',
+        label:'Login',
+        route:'login'
+      },
+      {
+        icon:'domain',
+        label:'Register',
+        route:'register'
+      },
     ]);
 
     sideNavCollapsed = signal(false);

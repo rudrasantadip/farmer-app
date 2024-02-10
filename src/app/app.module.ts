@@ -11,11 +11,19 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {} from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PrimeBotsComponent } from './components/prime-bots/prime-bots.component';
 import { SubBotsComponent } from './components/sub-bots/sub-bots.component';
 import { SettingsComponent } from './components/settings/settings.component'
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { DataTablesModule } from 'angular-datatables';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -27,6 +35,8 @@ import { SettingsComponent } from './components/settings/settings.component'
     PrimeBotsComponent,
     SubBotsComponent,
     SettingsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +47,12 @@ import { SettingsComponent } from './components/settings/settings.component'
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    DataTablesModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

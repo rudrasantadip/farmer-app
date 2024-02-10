@@ -1,0 +1,54 @@
+.main
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+.login-heading
+{
+    display: block;
+    text-align: center;
+}
+
+.login-heading h1
+{
+    padding: 0;
+    margin-top: 12px;
+}
+
+.border
+{
+    border: 1px solid silver;
+    width: 100%;
+}
+
+.input-credentials
+{
+    margin-top: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.utils
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.submit
+{
+    display: block;
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 15px;
+}

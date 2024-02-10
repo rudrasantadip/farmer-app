@@ -1,1 +1,61 @@
-<p>sub-bots works!</p>
+<!-- Information about the bot -->
+<div class="info">
+    <h1 class="m-2">Secondary Bots</h1>
+    <span
+      ><p>
+        They are the ones to make response to the users system.<br />They converse with the farmers.<br />
+        Send them messages, and responses. <br> They can be created or destroyed by the admins or through the prime bots.
+      </p></span
+    >
+  </div>
+  
+    <!-- Container for sub bots -->
+  <div class="sub-bots">
+      <table class="table table-hover" datatable [dtOptions]="dtOptions">
+          <thead>
+              <tr>
+                  <th>Bot Id</th>
+                  <th>Bot Job</th>
+                  <th>Bot Name</th>
+                  <th>Bot Type</th>
+                  <th>Run Status</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let bot of subBots()">
+                  <td>{{bot.botId}}</td>
+                  <td>{{bot.botJob}}</td>
+                  <td>{{bot.botName}}</td>
+                  <td>{{bot.botType}}</td>
+                  <td>{{bot.runStatus? 'Running':'Dormant'}}</td>
+                  <td>
+                    <!-- Button to run or stop a bot -->
+                      <button class="m-2" 
+                      mat-raised-button [color]="bot.runStatus? 'warn':'primary'"
+                      (click)="playOrstop(bot)">
+                            <i [class]="bot.runStatus? 'fa-solid fa-stop':'fa-solid fa-play'"></i>
+                          <!-- <mat-icon class="action">{{bot.runStatus? 'pause_presentation':'play_circle_outline'}}</mat-icon> -->
+                      </button>
+                      
+                      <!-- Settings button -->
+                      <button class="settings-button m-2" 
+                      mat-raised-button
+                      (click)="openSettings(bot)">
+                        <i class="fa-solid fa-gear"></i>
+                      </button>
+
+
+                      <!-- Button to delete the subbot -->
+                      <button class="m-2" 
+                      mat-raised-button color="warn"
+                      (click)="deleteBot(bot)">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  
+  

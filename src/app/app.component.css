@@ -1,3 +1,8 @@
+input[type="text"]:focus
+{
+    outline: none;
+}
+
 mat-toolbar
 {
     position: relative;
@@ -5,6 +10,35 @@ mat-toolbar
     background-color: #2978ffae;
 }
 
+
+.profile
+{
+    color: white;
+}
+
+.search-icon
+{
+    color: #2978ffae;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+}
+
+.searchbox
+{
+    display: block;
+    margin: auto;
+    flex-direction: row;
+    width: 28rem;
+    background-color: white;
+}
+
+.searchbox input
+{
+    border: none;
+    font-size: 18px;
+}
 mat-drawer-container
 {
     height: 100vh;

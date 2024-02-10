@@ -1,1 +1,64 @@
-<p>prime-bots works!</p>
+<div class="box">
+
+
+<div class="info">
+  <h1 class="m-2">Primary Bots</h1>
+  <span
+    ><p>
+      They are the absolute masters of these system.<br />They create, manage
+      and destroy the substitue bots, by taking instruction from the admins.<br />
+      Admins can interact with them through direct messages or the command line
+    </p></span
+  >
+</div>
+
+
+<div class="prime-bots">
+
+    <table class="table table-hover" datatable [dtOptions]="dtOptions">
+        <thead>
+            <tr>
+                <th>Bot Id</th>
+                <th>Bot Job</th>
+                <th>Bot Name</th>
+                <th>Bot Type</th>
+                <th>Run Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bot of primeBots()">
+                <td>{{bot.botId}}</td>
+                <td>{{bot.botJob}}</td>
+                <td>{{bot.botName}}</td>
+                <td>{{bot.botType}}</td>
+                <td>{{bot.runStatus? 'Running':'Dormant'}}</td>
+                <td>
+                    <!-- Button to start or stop bot -->
+                    <button mat-raised-button [color]="bot.runStatus? 'warn':'primary'"
+                    (click)="playOrstop(bot)">
+                        <!-- <mat-icon class="action">{{bot.runStatus? 'pause_presentation':'play_circle_outline'}}</mat-icon> -->
+                        <i [class]="bot.runStatus? 'fa-solid fa-stop':'fa-solid fa-play'"></i>
+                    </button>
+
+                    <button class="settings-button" mat-raised-button><mat-icon>settings</mat-icon></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="shell-button">
+    <button mat-raised-button (click)="viewShell.set(!viewShell())"><i class="fa-solid fa-code"></i></button>
+    <span class="m-2">Open Command Line</span>
+</div>
+
+<div [class]="viewShell()? 'exec-shell bg-dark':'hide-shell'">
+    <div class="panel">
+        <span [style.color]="'white'">$rudrasantadip></span>
+        <input type="text" class="shell-input">
+    </div>
+</div>
+
+    
+</div>

@@ -1,0 +1,64 @@
+<div class="main">
+  <div class="login-heading">
+    <h1>Admin Login</h1>
+  </div>
+
+  <div class="border"></div>
+
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="input-credentials">
+      <!-- Username box -->
+      <mat-form-field>
+        <mat-label>User Name</mat-label>
+        <input required
+        matInput [(ngModel)]="formdata.username"
+        name="username"
+        placeholder="example@email.com"
+         />
+        <mat-error>Please enter a valid email address</mat-error>
+      </mat-form-field>
+      <!-- Password box -->
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input required
+         matInput [type]="hide ? 'password' : 'text'"  
+        [(ngModel)]="formdata.password"
+        name="password"
+        placeholder="Password123MustbeHard$"
+        />
+      
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+        <mat-error>Please enter a valid password</mat-error>
+      </mat-form-field>
+
+      <div class="utils">
+        <!-- Signup -->
+        <div class="signup">
+          <a routerLink="/register" mat-flat-button [style.color]="'blue'"
+            >Signup</a
+          >
+        </div>
+
+        <!-- Forgot Password -->
+        <div class="forgot-password">
+          <a routerLink="/dashboard" mat-flat-button [style.color]="'blue'"
+            >Forgot Password?</a
+          >
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="submit">
+        <button mat-raised-button type="submit" color="primary">Login</button>
+      </div>
+    </div>
+  </form>
+</div>

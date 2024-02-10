@@ -4,6 +4,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PrimeBotsComponent } from './components/prime-bots/prime-bots.component';
 import { SubBotsComponent } from './components/sub-bots/sub-bots.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 export const routes: Routes = 
 [
@@ -28,6 +30,15 @@ export const routes: Routes =
   {
     path:'settings',
     component:SettingsComponent
+  }
+  ,
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
   }
 ];
 

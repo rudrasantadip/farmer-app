@@ -1,0 +1,77 @@
+h1,h2
+{
+font-weight: bold;
+margin-left: 12px;
+}
+
+button
+{
+    text-align: center;
+}
+
+.info span p
+{
+    font-weight: 500;
+    color: gray;
+    text-align: left;
+    margin-left: 12px;
+}
+
+.sub-bots
+{
+    display: block;
+    margin: auto;
+    padding: 13px;
+}
+
+.table thead tr th
+{
+    text-align: center;
+}
+
+.table tbody tr td
+{
+    text-align: center;
+}
+
+.action
+{
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    object-fit: cover;
+}
+
+.settings-button
+{
+    margin-left:12px;
+    text-align: center;
+}
+
+.exec-shell
+{
+    position: absolute;
+    bottom: 5%;
+    border: 2px solid black;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.hide-shell
+{
+    display: none;
+}
+
+.panel
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.panel span
+{
+    font-size: 18px;
+    font-size: 500;
+    color: gray;
+}
